@@ -100,12 +100,6 @@ const route = useRoute()
   <main class="mx-auto pt-[72px]">
     <RouterView />
   </main>
-
-  <!--
-  <main v-if="route.path !== '/'" class="max-w-[1280px] mx-auto p-6 pt-20">
-    <RouterView />
-  </main>
-  <RouterView v-else /> -->
 </template>
 
 <style>

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import LearningModule from '../views/LearningModule.vue'
+import LearningModuleLayout from '../views/LearningModuleLayout.vue'
 import ScamDetector from '@/views/ScamDetector.vue'
 import SimulationGames from '@/views/SimulationGames.vue'
 
@@ -13,9 +13,10 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/learning-module',
+      path: '/learning-module/:moduleName?',
       name: 'learningmodule',
-      component: LearningModule,
+      component: LearningModuleLayout,
+      props: true,
     },
     {
       path: '/scam-detector',
