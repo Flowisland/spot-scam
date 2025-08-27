@@ -97,16 +97,20 @@ const route = useRoute()
     </nav>
   </header>
 
-  <!-- Remove padding/margin for Home, keep for others -->
+  <main class="mx-auto pt-[72px]">
+    <RouterView />
+  </main>
+
+  <!--
   <main v-if="route.path !== '/'" class="max-w-[1280px] mx-auto p-6 pt-20">
     <RouterView />
   </main>
-  <RouterView v-else />
+  <RouterView v-else /> -->
 </template>
 
 <style>
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0; /* remove default body margin */
+  margin: 0;
 }
 </style>
