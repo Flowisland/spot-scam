@@ -28,7 +28,7 @@ const route = useRoute()
     <div class="max-w-[1280px] mx-auto flex justify-between items-center p-4">
       <div class="flex items-center space-x-3">
         <img src="@/assets/picture/logo.png" alt="Logo" class="w-10 h-10 object-contain" />
-        <h1 class="text-2xl font-bold" style="font-family: 'League Spartan'">SpotScam</h1>
+        <h1 class="text-2xl font-bold" style="font-family: 'League Spartan'">ScamSpot</h1>
       </div>
 
       <!-- Desktop nav -->
