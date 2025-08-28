@@ -89,16 +89,18 @@ function previousPage() {
 }
 
 function completeModule() {
-  // You can add completion logic here (save progress, etc.)
-  alert(
-    `🎉 Module "${moduleData.value?.title}" completed! Great job learning about scam prevention.`,
+  // Show completion message with confirmation
+  const shouldContinue = confirm(
+    `🎉 Module "${moduleData.value?.title}" completed! Great job learning about scam prevention.\n\nDo you want to continue to the next module?`,
   )
 
-  // Option 1: Go back to module selection
-  router.push('/learning-module')
-
-  // Option 2: Navigate to next logical module
-  // navigateToNextModule()
+  if (shouldContinue) {
+    // User chose Yes - go to next module
+    navigateToNextModule()
+  } else {
+    // User chose No - go back to learning module page
+    router.push('/learning-module')
+  }
 }
 
 function navigateToNextModule() {
@@ -106,12 +108,12 @@ function navigateToNextModule() {
   const moduleOrder = [
     'introduction-to-scams',
     'why-people-fall-prey',
-    'government-scams',
+    'phishing-scams',
+    'impersonation-scams',
+    'romance-scams',
     'investment-scams',
     'job-scams',
     'ecommerce-scams',
-    'fake-friend-call',
-    'phishing-scams',
   ]
 
   const currentIndex = moduleOrder.indexOf(props.moduleName)
@@ -120,7 +122,8 @@ function navigateToNextModule() {
   if (nextIndex < moduleOrder.length) {
     router.push(`/learning-module/${moduleOrder[nextIndex]}`)
   } else {
-    // All modules completed
+    // All modules completed - show final completion message
+    alert('🎉 Congratulations! You have completed all scam prevention modules!')
     router.push('/learning-module')
   }
 }

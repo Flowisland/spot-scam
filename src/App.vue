@@ -27,7 +27,7 @@ const route = useRoute()
   <header class="bg-blue-900 text-white shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-[1280px] mx-auto flex justify-between items-center p-4">
       <div class="flex items-center space-x-3">
-        <img src="@/assets/logo.png" alt="Logo" class="w-10 h-10 object-contain" />
+        <img src="@/assets/picture/logo.png" alt="Logo" class="w-10 h-10 object-contain" />
         <h1 class="text-2xl font-bold" style="font-family: 'League Spartan'">SpotScam</h1>
       </div>
 

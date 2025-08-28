@@ -33,36 +33,19 @@ onUnmounted(() => {
 // Top-level modules with routes
 const modules = [
   { name: 'Introduction To Scams', route: 'introduction-to-scams' },
-  { name: 'Why People Fall Prey' },
+  { name: 'Why People Fall Prey', route: 'why-people-fall-prey' },
   { name: 'Understanding Scam Types', route: null, hasSubmodules: true },
 ]
 
 // Sub-items for "Understanding Scam Types"
 const scamTypeSubs = [
-  { name: 'Government Scams' },
-  { name: 'Investment Scams' },
-  { name: 'Job Scams' },
-  { name: 'E-commerce Scams' },
-  { name: 'Fake Friend Call' },
-  { name: 'Phishing Scams' },
+  { name: 'Phishing Scams', route: 'phishing-scams' },
+  { name: 'Impersonation Scams', route: 'impersonation-scams' },
+  { name: 'Romance Scams', route: 'romance-scams' },
+  { name: 'Investment Scams', route: 'investment-scams' },
+  { name: 'Job Scams', route: 'job-scams' },
+  { name: 'E-commerce Scams', route: 'ecommerce-scams' },
 ]
-
-// // Top-level modules with routes
-// const modules = [
-//   { name: 'Introduction To Scams', route: 'introduction-to-scams' },
-//   { name: 'Why People Fall Prey', route: 'why-people-fall-prey' },
-//   { name: 'Understanding Scam Types', route: null, hasSubmodules: true }
-// ]
-
-// // Sub-items for "Understanding Scam Types"
-// const scamTypeSubs = [
-//   { name: 'Government Scams', route: 'government-scams' },
-//   { name: 'Investment Scams', route: 'investment-scams' },
-//   { name: 'Job Scams', route: 'job-scams' },
-//   { name: 'E-commerce Scams', route: 'ecommerce-scams' },
-//   { name: 'Fake Friend Call', route: 'fake-friend-call' },
-//   { name: 'Phishing Scams', route: 'phishing-scams' },
-// ]
 
 function toggleScamTypes() {
   openScamTypes.value = !openScamTypes.value
@@ -195,7 +178,7 @@ function navigateToSubModule(route) {
       <LearningModule v-if="route.params.moduleName" :moduleName="route.params.moduleName" />
       <div v-else class="text-center py-12">
         <img
-          src="@/assets/module.png"
+          src="@/assets/picture/module.png"
           alt="Get to Know Scam"
           class="w-98 h-98 mb-6 mt-12 object-contain"
         />

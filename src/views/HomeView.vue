@@ -12,7 +12,7 @@ function goToLearning() {
 <template>
   <div class="relative w-full h-screen overflow-hidden">
     <img
-      src="@/assets/homepage.png"
+      src="@/assets/picture/homepage.png"
       alt="Hero"
       class="absolute inset-0 w-full h-full object-cover"
     />
