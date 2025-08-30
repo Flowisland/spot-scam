@@ -33,7 +33,7 @@ const route = useRoute()
 
       <!-- Desktop nav -->
       <nav class="hidden md:flex space-x-6">
-        <RouterLink to="/" class="hover:text-gray-300 transition duration-300">Home</RouterLink>
+        <RouterLink to="/home" class="hover:text-gray-300 transition duration-300">Home</RouterLink>
         <RouterLink to="/learning-module" class="hover:text-gray-300 transition duration-300"
           >Learning Module</RouterLink
         >

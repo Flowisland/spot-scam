@@ -11,10 +11,17 @@ function goToLearning() {
 
 <template>
   <div class="relative w-full h-screen overflow-hidden">
+    <!-- Mobile image -->
+    <img
+      src="@/assets/picture/homepage-mobile.png"
+      alt="Hero"
+      class="md:hidden absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- Desktop image -->
     <img
       src="@/assets/picture/homepage.png"
       alt="Hero"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="hidden md:block absolute inset-0 w-full h-full object-cover"
     />
 
     <!-- Desktop/Tablet Layout (left side text) -->
@@ -71,8 +78,6 @@ function goToLearning() {
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
-
 body {
   margin: 0;
 }
