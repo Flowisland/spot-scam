@@ -5,6 +5,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 const password = ref('')
 const errorMessage = ref('')
+const correctPassword = import.meta.env.VITE_APP_PASSWORD
 
 onMounted(() => {
   // Hide header on password page
@@ -15,8 +16,8 @@ onMounted(() => {
 })
 
 function handleSubmit() {
-  if (password.value === 'dreamteamyay!!') {
-    // Set authentication in sessionStorage
+  if (password.value === correctPassword) {
+
     sessionStorage.setItem('scamspot_auth', 'true')
 
     // Show header again
@@ -47,7 +48,7 @@ function handleKeyPress(event) {
 <template>
   <div class="fixed inset-0 bg-blue-900 flex items-center justify-center px-4">
     <div class="w-full max-w-md space-y-8 text-center">
-      <!-- Logo/Brand -->
+
       <div>
         <h1
           class="text-white text-4xl md:text-5xl font-bold mb-2"
@@ -88,10 +89,6 @@ function handleKeyPress(event) {
         </button>
       </div>
 
-      <!-- Optional: Hint -->
-      <p class="text-blue-300 text-sm mt-8">
-        🔒 This page is password protected
-      </p>
     </div>
   </div>
 </template>
